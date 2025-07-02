@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Harper's Adventure Roadmap</title>
+  <link rel="stylesheet" href="adventure.css" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <style>
+    body {
+      background: linear-gradient(#fff3fb, #e6faff);
+      font-family: 'Trebuchet MS', sans-serif;
+      text-align: center;
+      padding: 40px 20px;
+      margin: 0;
+      color: #444;
+    }
+
+    h1 {
+      color: #ba00b4;
+      text-shadow: 1px 1px #ffd6ff;
+    }
+
+    .map-container {
+      background: #ffffffcc;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 0 20px #ffe5f6;
+    }
+
+    .map-image {
+      width: 100%;
+      max-width: 650px;
+      border: 4px dotted #ff90cc;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #ffc4ec;
+    }
+
+    .caption {
+      margin-top: 15px;
+      font-style: italic;
+      color: #a54caf;
+    }
+
+    #creatureFloat {
+      position: absolute;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: rebeccapurple;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🎯 Navigation Bar with Urgent Message Included -->
+  <nav>
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="about_me.html">🌟 About Me</a></li>
+      <li><a href="games_I_play.html">🎮 Games I Play</a></li>
+      <li><a href="What_I_Like.html">💖 What I Like</a></li>
+      <li><a href="my_goals.html">🎯 My Goals</a></li>
+      <li><a href="road_map.html">🗺️ Roadmap</a></li>
+      <li><a href="quizzes.html">🧠 Quizzes</a></li>
+      <li><a href="generator.html" data-icon="🦊">Animal Generator</a></li>
+      <li><span style="color: red; font-weight: bold;">⚠️ If "Games I Play" doesn’t work, check URL: harpershorsesyt.github.io/games_I_play.html</span></li>
+    </ul>
+  </nav>
+
+  <!-- 🦄 Floating Magical Companion -->
+  <div id="creatureFloat"></div>
+
+  <div class="map-container">
+    <h1>🗺️ Harper's Adventure Roadmap</h1>
+    <img src="road_map.png" alt="Harper's Adventure Roadmap" class="map-image" />
+    <p class="caption">Every icon is a step closer to Harper’s sparkling destiny!</p>
+  </div>
+
+  <script>
+    const magicalCreatures = [
+      "🦄 Unicorn of Stardust",
+      "🐚 Starlace Seahorn",
+      "🐉 Emberwhirl Dragonette",
+      "🦊 Frostbit Fuzzlefox",
+      "🪶 Glimmering Griffowl",
+      "🦋 Prismwing Sylph",
+      "🐇 Moonblink Hare"
+    ];
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const floaty = document.getElementById("creatureFloat");
+      const chosen = magicalCreatures[Math.floor(Math.random() * magicalCreatures.length)];
+      floaty.textContent = `✨ Your magical companion is: ${chosen}`;
+
+      const randX = Math.random() * 80;
+      const randY = Math.random() * 80;
+
+      floaty.style.top = `${randY}vh`;
+      floaty.style.left = `${randX}vw`;
+    });
+  </script>
+
+</body>
+</html>

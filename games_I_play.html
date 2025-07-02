@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Games I Play</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <style>
+    #creatureFloat {
+      position: absolute;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: rebeccapurple;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="about_me.html">🌟 About Me</a></li>
+      <li><a href="Games_I_Play.html">🎮 Games I Play</a></li>
+      <li><a href="What_I_Like.html">💖 What I Like</a></li>
+      <li><a href="my_goals.html">🎯 My Goals</a></li>
+      <li><a href="road_map.html">🗺️ Roadmap</a></li>
+      <li><a href="quizzes.html">🧠 Quizzes</a></li>
+      <li><a href="generator.html" data-icon="🦊">Animal Generator</a></li>
+      <li><span style="color: red; font-weight: bold;">⚠️ If "Games I Play" doesn’t work, check URL: harpershorsesyt.github.io/games_I_play.html</span></li>
+    </ul>
+  </nav>
+
+  <!-- ✨ Floating Magical Companion -->
+  <div id="creatureFloat"></div>
+
+  <header>
+    <h1>🎮 Games I Play</h1>
+    <p>Step into the worlds Harper loves to explore!</p>
+  </header>
+
+  <main>
+    <section id="games">
+      <h2>🕹️ Harper’s Gaming Adventures</h2>
+      <p>Harper brings creativity and fun to all her favorite games, and you’ll see them featured on her channel!</p>
+      <ul>
+        <li>🟩 <strong>Minecraft</strong> — Crafting, building, and surviving in magical blocky worlds</li>
+        <li>🐴 <strong>Star Stable Online</strong> — Saddle up for horseback quests, races, and fashion</li>
+        <li>📦 <strong>Unpacking</strong> — Relaxing, story-rich gameplay through unpacking cherished items</li>
+        <li>🌊 <strong>Floating Sandbox</strong> — Watch ships sink and physics go wild on the high seas</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with magic by Harper & Ollie 💖</p>
+  </footer>
+
+  <!-- 🔮 Sparkle Logic -->
+  <script>
+    const magicalCreatures = [
+      "🦄 Unicorn of Stardust",
+      "🐚 Starlace Seahorn",
+      "🐉 Emberwhirl Dragonette",
+      "🦊 Frostbit Fuzzlefox",
+      "🪶 Glimmering Griffowl",
+      "🦋 Prismwing Sylph",
+      "🐇 Moonblink Hare"
+    ];
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const floaty = document.getElementById("creatureFloat");
+      const chosen = magicalCreatures[Math.floor(Math.random() * magicalCreatures.length)];
+      floaty.textContent = `✨ Your magical companion is: ${chosen}`;
+
+      const randX = Math.random() * 80;
+      const randY = Math.random() * 80;
+
+      floaty.style.top = `${randY}vh`;
+      floaty.style.left = `${randX}vw`;
+    });
+  </script>
+
+</body>
+</html>

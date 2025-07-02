@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What I Like</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <style>
+    #creatureFloat {
+      position: absolute;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: rebeccapurple;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🎯 Navigation Bar with Urgent Message Included -->
+  <nav>
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="about_me.html">🌟 About Me</a></li>
+      <li><a href="games.html">🎮 Games I Play</a></li>
+      <li><a href="What_I_Like.html">💖 What I Like</a></li>
+      <li><a href="my_goals.html">🎯 My Goals</a></li>
+      <li><a href="road_map.html">🗺️ Roadmap</a></li>
+      <li><a href="quizzes.html">🧠 Quizzes</a></li>
+      <li><a href="generator.html" data-icon="🦊">Animal Generator</a></li>
+      <li><span style="color: red; font-weight: bold;">⚠️ If "Games I Play" doesn’t work, check URL: harpershorsesyt.github.io/games_I_play.html</span></li>
+    </ul>
+  </nav>
+
+  <!-- 🐾 Magical Friend Floats Here -->
+  <div id="creatureFloat"></div>
+
+  <header>
+    <h1>💖 What I Like</h1>
+    <p>Some of my favorite things that make every day a little more magical!</p>
+  </header>
+
+  <section id="likes">
+    <h2>🎀 Harper’s Favorite Things</h2>
+    <ul>
+      <li>🐴 Horses (you gotta love 'em!)</li>
+      <li>🟩 Games such as Minecraft & 🐎 Star Stable Online</li>
+      <li>🐇 Bunnies (so cute and fluffy!)</li>
+      <li>🪄 Magic (not that kind! The kind of magic as in unicorns, pegasi etc)</li>
+      <li>📹 Creating fun YouTube videos</li>
+      <li>🎨 Decorating, crafting, and coloring</li>
+      <li>💻 Tablet games (Fishing foods, coloring games etc)</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>-- Sparkles provided by Harper, magic coded by Ollie --</p>
+  </footer>
+
+  <!-- 🔮 Floating Magical Companion Script -->
+  <script>
+    const magicalCreatures = [
+      "🦄 Unicorn of Stardust",
+      "🐚 Starlace Seahorn",
+      "🐉 Emberwhirl Dragonette",
+      "🦊 Frostbit Fuzzlefox",
+      "🪶 Glimmering Griffowl",
+      "🦋 Prismwing Sylph",
+      "🐇 Moonblink Hare"
+    ];
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const floaty = document.getElementById("creatureFloat");
+      const chosen = magicalCreatures[Math.floor(Math.random() * magicalCreatures.length)];
+      floaty.textContent = `✨ Your magical companion is: ${chosen}`;
+
+      const randX = Math.random() * 80;
+      const randY = Math.random() * 80;
+
+      floaty.style.top = `${randY}vh`;
+      floaty.style.left = `${randX}vw`;
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🔮 Name & Backstory Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+</head>
+<body>
+
+  <!-- 🌟 Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html" data-icon="🏠">Home</a></li>
+      <li><a href="about_me.html" data-icon="🌟">About Me</a></li>
+      <li><a href="games_I_play.html" data-icon="🎮">Games I Play</a></li>
+      <li><a href="What_I_Like.html" data-icon="💖">What I Like</a></li>
+      <li><a href="my_goals.html" data-icon="🎯">My Goals</a></li>
+      <li><a href="road_map.html" data-icon="🗺️">Roadmap</a></li>
+      <li><a href="quizzes.html" data-icon="🧠">Quizzes</a></li>
+      <li><a href="generator.html" data-icon="🦊">Animal Generator</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✨ Generator Box -->
+  <div class="generator-box">
+    <h1>🔮 Name & Backstory</h1>
+
+    <label for="species">Species</label>
+    <select id="species">
+      <option value="Unicorn">Unicorn</option>
+      <option value="Dragon">Dragon</option>
+      <option value="Fuzzlefox">Fuzzlefox</option>
+      <option value="Sylph">Sylph</option>
+      <option value="Seahorn">Seahorn</option>
+      <option value="Phoenix">Phoenix</option>
+    </select>
+
+    <label for="element">Element/Theme</label>
+    <select id="element">
+      <option value="Stardust">Stardust</option>
+      <option value="Moonlight">Moonlight</option>
+      <option value="Ember">Ember</option>
+      <option value="Frost">Frost</option>
+      <option value="Mystic Mist">Mystic Mist</option>
+      <option value="Glitter">Glitter</option>
+    </select>
+
+    <label for="personality">Personality Spark</label>
+    <select id="personality">
+      <option value="Brave">Brave</option>
+      <option value="Silly">Silly</option>
+      <option value="Mysterious">Mysterious</option>
+      <option value="Inventive">Inventive</option>
+      <option value="Kind-hearted">Kind-hearted</option>
+      <option value="Moody">Moody</option>
+    </select>
+
+    <label for="skill">Special Talent (optional)</label>
+    <input type="text" id="skill" placeholder="e.g. bubble-powered boots" />
+
+    <div class="buttons">
+      <button id="randomizeBtn">🔀 Randomize</button>
+      <button id="generateBtn">✨ Generate!</button>
+    </div>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="generator.js"></script>
+</body>
+</html>

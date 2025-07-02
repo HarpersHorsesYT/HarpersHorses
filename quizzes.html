@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🧠 Quizzes – Harper’s World</title>
+  <link rel="stylesheet" href="styless.css" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <style>
+    #creatureFloat {
+      position: absolute;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: rebeccapurple;
+      z-index: 1000;
+    }
+
+    .quiz-box {
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 0 24px rgba(140, 100, 255, 0.1);
+    }
+
+    .quiz-box h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .quiz-box select {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+
+    .quiz-box button {
+      background: linear-gradient(to right, #ff85d4, #a98eff);
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .quiz-box button:hover {
+      background: #ffcfff;
+      color: #3c0066;
+    }
+
+    .quiz-box p.feedback {
+      font-weight: bold;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌐 Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="about_me.html">🌟 About Me</a></li>
+      <li><a href="games_I_play.html">🎮 Games I Play</a></li>
+      <li><a href="What_I_Like.html">💖 What I Like</a></li>
+      <li><a href="my_goals.html">🎯 My Goals</a></li>
+      <li><a href="road_map.html">🗺️ Roadmap</a></li>
+      <li><a href="quizzes.html">🧠 Quizzes</a></li>
+      <li><a href="generator.html" data-icon="🦊">Animal Generator</a></li>
+      <li><span style="color: red; font-weight: bold;">⚠️ If "Games I Play" doesn’t work, check URL: harpershorsesyt.github.io/games_I_play.html</span></li>
+    </ul>
+  </nav>
+
+  <!-- 🦄 Magical Companion Float -->
+  <div id="creatureFloat"></div>
+
+  <!-- 🧚 Magical Animal Quiz -->
+  <div class="quiz-box">
+    <h1>🦄 What Magical Animal Are You?</h1>
+    <select id="answer">
+      <option value="unicorn">Pink</option>
+      <option value="dragon">Red</option>
+      <option value="pegasus">Blue</option>
+      <option value="phoenix">Gold</option>
+      <option value="griffin">Silver</option>
+      <option value="sylph">Lavender</option>
+      <option value="seahorn">Aqua</option>
+      <option value="fuzzlefox">Mint Green</option>
+    </select>
+    <br />
+    <button onclick="getResult()">Reveal My Animal!</button>
+    <p id="result"></p>
+  </div>
+
+  <!-- 📚 Knowledge Quiz -->
+  <div class="quiz-box" style="margin-top: 60px;">
+    <h1>🧠 Magical Knowledge Quiz</h1>
+
+    <ol id="knowledge-quiz">
+      <li>
+        <p>True or False: Dragons are cold-blooded.</p>
+        <select data-correct="false">
+          <option value="">Choose an answer</option>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+        <p class="feedback"></p>
+      </li>
+
+      <li>
+        <p>Which creature is reborn from flames?</p>
+        <select data-correct="phoenix">
+          <option value="">Choose an answer</option>
+          <option value="unicorn">Unicorn</option>
+          <option value="griffin">Griffin</option>
+          <option value="phoenix">Phoenix</option>
+          <option value="pegasus">Pegasus</option>
+        </select>
+        <p class="feedback"></p>
+      </li>
+
+      <li>
+        <p>True or False: A Pegasus has wings.</p>
+        <select data-correct="true">
+          <option value="">Choose an answer</option>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+        <p class="feedback"></p>
+      </li>
+
+      <li>
+        <p>Which color is most associated with a Unicorn?</p>
+        <select data-correct="pink">
+          <option value="">Choose an answer</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="blue">Blue</option>
+          <option value="pink">Pink</option>
+        </select>
+        <p class="feedback"></p>
+      </li>
+
+      <li>
+        <p>Which of these is NOT a real mythical creature?</p>
+        <select data-correct="cloud lion">
+          <option value="">Choose an answer</option>
+          <option value="griffin">Griffin</option>
+          <option value="sylph">Sylph</option>
+          <option value="cloud lion">Cloud Lion</option>
+          <option value="phoenix">Phoenix</option>
+        </select>
+        <p class="feedback"></p>
+      </li>
+    </ol>
+
+    <button onclick="checkAllAnswers()">Check My Answers</button>
+  </div>
+
+  <!-- ✨ Companion Float Script -->
+  <script>
+    const magicalCreatures = [
+      "🦄 Unicorn of Stardust",
+      "🐚 Starlace Seahorn",
+      "🐉 Emberwhirl Dragonette",
+      "🦊 Frostbit Fuzzlefox",
+      "🪶 Glimmering Griffowl",
+      "🦋 Prismwing Sylph",
+      "🐇 Moonblink Hare"
+    ];
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const floaty = document.getElementById("creatureFloat");
+      const chosen = magicalCreatures[Math.floor(Math.random() * magicalCreatures.length)];
+      floaty.textContent = `✨ Your magical companion is: ${chosen}`;
+      const randX = Math.random() * 80;
+      const randY = Math.random() * 80;
+      floaty.style.top = `${randY}vh`;
+      floaty.style.left = `${randX}vw`;
+    });
+  </script>
+
+  <!-- 🔧 Quiz Logic Scripts -->
+  <script src="quiz.js"></script>
+  <script src="thequiz.js"></script>
+
+</body>
+</html>

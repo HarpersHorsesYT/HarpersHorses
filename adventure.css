@@ -1,0 +1,46 @@
+/* adventure.css — Whimsical and warm styling for Harper’s Roadmap */
+
+body {
+  background: linear-gradient(180deg, #fff3fb, #e0faff);
+  font-family: 'Trebuchet MS', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 40px 20px;
+  color: #333;
+}
+
+h1 {
+  color: #c800b0;
+  text-shadow: 1px 1px #ffe0f0;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  background: #ffffffda;
+  padding: 30px;
+  border-radius: 18px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 0 20px #ffc7ee;
+}
+
+.map-image {
+  width: 100%;
+  max-width: 640px;
+  border: 5px dotted #ff94e1;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #ffd9f5;
+  transition: transform 0.2s ease;
+}
+
+.map-image:hover {
+  transform: scale(1.02);
+}
+
+.caption {
+  margin-top: 15px;
+  font-style: italic;
+  color: #a04bbd;
+  font-size: 1.1rem;
+}
