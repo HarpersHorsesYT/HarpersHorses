@@ -56,6 +56,24 @@
       font-weight: bold;
       margin-top: 4px;
     }
+
+    #downloadBtn, #downloadBtn2 {
+      background: linear-gradient(to right, #00b4d8, #7209b7);
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-top: 10px;
+    }
+
+    #downloadBtn:hover, #downloadBtn2:hover {
+      background: #a98eff;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -99,7 +117,6 @@
   <!-- 📚 Knowledge Quiz -->
   <div class="quiz-box" style="margin-top: 60px;">
     <h1>🧠 Magical Knowledge Quiz</h1>
-
     <ol id="knowledge-quiz">
       <li>
         <p>True or False: Dragons are cold-blooded.</p>
@@ -110,7 +127,6 @@
         </select>
         <p class="feedback"></p>
       </li>
-
       <li>
         <p>Which creature is reborn from flames?</p>
         <select data-correct="phoenix">
@@ -122,7 +138,6 @@
         </select>
         <p class="feedback"></p>
       </li>
-
       <li>
         <p>True or False: A Pegasus has wings.</p>
         <select data-correct="true">
@@ -132,7 +147,6 @@
         </select>
         <p class="feedback"></p>
       </li>
-
       <li>
         <p>Which color is most associated with a Unicorn?</p>
         <select data-correct="pink">
@@ -144,9 +158,8 @@
         </select>
         <p class="feedback"></p>
       </li>
-
       <li>
-        <p>Which of these is NOT a real mythical creature?</p>
+        <p>Which of these is NOT a known mythical creature?</p>
         <select data-correct="cloud lion">
           <option value="">Choose an answer</option>
           <option value="griffin">Griffin</option>
@@ -157,8 +170,14 @@
         <p class="feedback"></p>
       </li>
     </ol>
-
     <button onclick="checkAllAnswers()">Check My Answers</button>
+  </div>
+
+  <!-- 📥 Word Search Downloads -->
+  <div class="quiz-box" style="margin-top: 60px;">
+    <h1>📥 Download Harper’s Mythical Word Search</h1>
+    <p>Ready for a magical challenge? Download the word search and see what you can find!</p>
+    <button id="downloadBtn">🧠 Download PDF</button>
   </div>
 
   <!-- ✨ Companion Float Script -->
@@ -187,6 +206,7 @@
   <!-- 🔧 Quiz Logic Scripts -->
   <script src="quiz.js"></script>
   <script src="thequiz.js"></script>
+  <script src="search1.js"></script>
 
 </body>
 </html>
