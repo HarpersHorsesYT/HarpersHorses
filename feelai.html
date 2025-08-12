@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EchoAI — Harper's Feelings Companion</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f0ff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    nav li {
+      margin: 8px 12px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #5a4fcf;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background-color: #e6e0ff;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #d1c8ff;
+    }
+
+    #echo-chat {
+      background: #fff;
+      border: 2px solid #d0c4f5;
+      border-radius: 12px;
+      padding: 20px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    #echo-output {
+      min-height: 80px;
+      margin-bottom: 20px;
+      padding: 10px;
+      background: #f0eaff;
+      border-radius: 8px;
+      font-style: italic;
+    }
+
+    #echo-input {
+      width: calc(100% - 100px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 16px;
+      margin-left: 10px;
+      background-color: #c2b6f7;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #a89be0;
+    }
+
+    #download-btn {
+      margin-top: 30px;
+      background-color: #8f7de8;
+      color: white;
+    }
+
+    #download-btn:hover {
+      background-color: #7a6bd1;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="about_me.html">🌟 About Me</a></li>
+      <li><a href="games_I_play.html">🎮 Games I Play</a></li>
+      <li><a href="What_I_Like.html">💖 What I Like</a></li>
+      <li><a href="my_goals.html">🎯 My Goals</a></li>
+      <li><a href="road_map.html">🗺️ Roadmap</a></li>
+      <li><a href="quizzes.html">🧠 Quizzes</a></li>
+      <li><a href="generator.html">🦊 Animal Generator</a></li>
+      <li><a href="feelai.html">EchoAI Feelings</a></li>
+    </ul>
+  </nav>
+
+  <h1>EchoAI — Harper’s Feelings Companion</h1>
+
+  <div id="echo-chat">
+    <div id="echo-output">Echo is listening...</div>
+    <input type="text" id="echo-input" placeholder="Tell Echo how you feel..." />
+    <button onclick="processEcho()">Send</button>
+  </div>
+
+  <button id="download-btn" onclick="window.location.href='https://example.com/download-echoai'">
+    ⬇️ Download EchoAI
+  </button>
+
+  <script src="feelai.js"></script>
+
+</body>
+</html>
