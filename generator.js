@@ -46,7 +46,9 @@ function generateStory() {
     "summoned a rainbow with a single sneeze",
     "taught moonbeams how to dance",
     "turned raindrops into candy crystals",
-    "wherever they hopped, flowers giggled"
+    "wherever they hopped, flowers giggled",
+    "had a tendency to fart quite a lot",
+    "likes music"
   ];
   const action = pick(actions);
 
